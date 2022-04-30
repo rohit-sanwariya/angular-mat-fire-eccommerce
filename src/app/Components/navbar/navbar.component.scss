@@ -1,0 +1,26 @@
+.mat-toolbar.container{
+  //  background-color: #f1f1f1;
+  color: #fff;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+
+  div{
+    .mat-form-field{
+      input{
+
+        &::-webkit-input-placeholder{
+          font-size: .9rem !important ;
+        }
+      }
+    }
+    a{
+      font-size: 1rem;
+    }
+    a.logo{
+      font-size: 1.5rem;
+    }
+  }
+
+
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fire-ngrx-crud": {
+      "hosting": {
+        "fire-ngrx-crud": [
+          "fire-ngrx-crud"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fire-ngrx-crud"
+  }
+}

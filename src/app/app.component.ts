@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { ProductsStateSchema } from './Interfaces/products-state-schema';
+import { FireCrudService } from './Services/fire-crud.service';
+import { loadProductStart, loadProductSuccess } from './Store/products/products.actions';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fire-ngrx-crud';
+    products$:any
+   constructor(
+     private firecrud:FireCrudService,
+     private store:Store<{'products':ProductsStateSchema}>,
+     ){
+this.store.dispatch(loadProductStart())
+this.products$ = this.firecrud.getProducts()
+
+
+
+
+
+   }
 }
